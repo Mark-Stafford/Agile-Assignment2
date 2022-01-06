@@ -72,5 +72,10 @@ router.get('/tmdb/upcoming', asyncHandler( async(req, res) => {
     const upcomingMovies = await getUpcomingMovies();
     res.status(200).json(upcomingMovies);
   }));
+
+  router.get('/tmdb/discover', asyncHandler( async(req, res) => {
+    const discoverMovies = await getMovies();
+    res.status(200).json(discoverMovies);
+  }));
   
 export default router;
